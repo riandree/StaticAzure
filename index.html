@@ -10,6 +10,7 @@
       margin: 0;
       padding: 0;
       background-color: #f5f5f5;
+      overflow: hidden; /* Prevents scrollbars */
     }
     header {
       background-color: #333;
@@ -38,13 +39,15 @@
       height: 100px;
       position: absolute;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      animation: moveLogo 3s infinite alternate;
+      left: 0;
+      animation: moveLogo 5s infinite linear;
     }
     @keyframes moveLogo {
-      to {
-        transform: translateX(calc(100vw - 100px));
+      0% {
+        left: 0;
+      }
+      100% {
+        left: calc(100vw - 100px);
       }
     }
   </style>
