@@ -9,14 +9,17 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f7f7f7;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
     }
     .container {
       text-align: center;
+      margin-top: 50px;
     }
     h1 {
       font-size: 2.5rem;
@@ -30,13 +33,31 @@
       text-decoration: none;
       color: #007bff;
     }
+    #logo {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: moveLogo 3s infinite alternate;
+    }
+    @keyframes moveLogo {
+      to {
+        transform: translateX(calc(100vw - 100px));
+      }
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Welcome to Azure Static Websites Demo</h1>
+  </header>
   <div class="container">
-    <h1>This is a Demo Page</h1>
+    <h2>This is a Demo Page</h2>
     <p>Used to try out Azure's <strong>Static Websites</strong> feature.</p>
-    <p>Learn more about <a href="https://azure.microsoft.com/en-us/services/storage/blobs/">Azure Static Websites</a></p>
+    <p>Learn more about <a href="https://azure.microsoft.com/en-us/products/app-service/static/#layout-container-uidb8e1">Azure Static Websites</a></p>
+    <img id="logo" src="https://via.placeholder.com/100" alt="Logo">
   </div>
 </body>
 </html>
